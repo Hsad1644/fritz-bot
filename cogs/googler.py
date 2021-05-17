@@ -21,3 +21,7 @@ class GFinder(commands.Cog):
         got = do_search(query)
         for i in got:
             await ctx.send(i)
+
+
+def setup(client):
+    client.add_cog(GFinder(client))

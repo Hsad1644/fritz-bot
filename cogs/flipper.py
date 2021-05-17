@@ -20,3 +20,7 @@ class Flipper(commands.Cog):
     async def flip(self, ctx, amt: int = 1):
         for i in range(amt):
             await ctx.send(f'`{flipper()}`')
+
+
+def setup(client):
+    client.add_cog(Flipper(client))
