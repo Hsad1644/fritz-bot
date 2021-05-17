@@ -1,5 +1,4 @@
 import discord
-import random
 from discord.ext import commands
 import os
 import scraper
@@ -8,11 +7,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
-
-
-def flipper():
-    rest = random.random()
-    return 'heads' if rest < 0.5 else 'tails'
 
 
 client = commands.Bot(command_prefix='!')
@@ -46,12 +40,6 @@ for filename in os.listdir('./cogs'):
 async def on_command_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         await ctx.send("Syntax Error")
-
-
-@client.command()
-async def flip(ctx, amt: int):
-    for i in range(amt):
-        await ctx.send(flipper())
 
 
 @client.command()
