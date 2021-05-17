@@ -2,18 +2,12 @@ import discord
 import random
 from discord.ext import commands
 import os
-from googlesearch import search
 import scraper
 from dotenv import load_dotenv
 
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
-
-
-def do_search(q):
-    res = search(q, num=4, stop=5, pause=2)
-    return res
 
 
 def flipper():
@@ -52,14 +46,6 @@ for filename in os.listdir('./cogs'):
 async def on_command_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         await ctx.send("Syntax Error")
-
-
-@client.command()
-async def find(ctx, *queries):
-    query = ' '.join(queries)
-    got = do_search(query)
-    for i in got:
-        await ctx.send(i)
 
 
 @client.command()
