@@ -19,7 +19,7 @@ class Flipper(commands.Cog):
     @client.command()
     async def flip(self, ctx, amt: int = 1):
         for i in range(amt):
-            await ctx.send(f'`{flipper()}`')
+            await ctx.send(f'`{self.flipper()}`')
             
     
     @flip.error
