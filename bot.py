@@ -2,9 +2,9 @@ import discord
 from discord.ext import commands
 import os
 import scraper
-from dotenv import Dotenv
+from dotenv import load_env
 
-Dotenv()
+load_env()
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 
