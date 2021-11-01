@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import random
 
+client = commands.Bot(command_prefix='-')
 
 class Flipper(commands.Cog):
     def __init__(self, client):
