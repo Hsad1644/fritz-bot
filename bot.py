@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import os
 import scraper
-from dotenv import load_dotenv
+from dotenv import Dotenv
 
 
 load_dotenv()
