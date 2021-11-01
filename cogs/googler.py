@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from googlesearch import search
 
+client = commands.Bot(command_prefix='-')
 
 class GFinder(commands.Cog):
     def __init__(self, client):
