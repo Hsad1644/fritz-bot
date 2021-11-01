@@ -70,10 +70,5 @@ async def lapS_error(ctx, error):
         await ctx.send('Enter query values in `-laptop <values>`')
 
 
-@flip.error
-async def on_command_error(ctx, error):
-    if isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send("**Syntax:** `-flip <number of flips>`")
-
 
 client.run(TOKEN)
