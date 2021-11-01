@@ -2,9 +2,10 @@ import discord
 from discord.ext import commands
 import os
 import scraper
-from dotenv import load_env
+from dotenv import Dotenv
 
-load_env()
+dotenv = Dotenv(os.path.join(os.path.dirname(__file__), ".env")) # Of course, replace by your correct path
+os.environ.update(dotenv)
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 
