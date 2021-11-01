@@ -20,6 +20,12 @@ class Flipper(commands.Cog):
     async def flip(self, ctx, amt: int = 1):
         for i in range(amt):
             await ctx.send(f'`{flipper()}`')
+            
+    
+    @flip.error
+    async def on_command_error(ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send("**Syntax:** `-flip <number of flips>`")
 
 
 def setup(client):
