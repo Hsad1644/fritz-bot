@@ -4,8 +4,7 @@ import os
 import scraper
 from dotenv import Dotenv
 
-
-load_dotenv()
+Dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 
