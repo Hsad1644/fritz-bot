@@ -15,7 +15,7 @@ class GTS(commands.cog):
     @commands.command()
     async def googl(self, ctx):
         with open("../assets/gts.gif", 'rb') as f:
-            pic = discord.file(f)
+            pic = discord.File(f)
             await ctx.send(file=pic)
 
 
