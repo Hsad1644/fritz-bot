@@ -14,10 +14,9 @@ class GTS(commands.Cog):
 
     @commands.command()
     async def googl(self, ctx):
-        with open("../assets/gts.gif", 'rb') as f:
-            pic = discord.File(f)
-            await ctx.send(file=pic)
-            print("sent gif")
+        pic = discord.File(r"../assets/gts.gif")
+        await ctx.send(file=pic)
+        print("sent gif")
 
     @googl.error
     async def on_command_error(self, ctx, error):
