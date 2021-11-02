@@ -1,8 +1,10 @@
 import discord
 from discord.ext import commands
 
+client = commands.Bot(command_prefix="!")
 
-class GTS(client):
+
+class GTS(commands.cog):
     def __init__(self, client):
         self.client = client
 
