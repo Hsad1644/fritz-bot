@@ -17,7 +17,7 @@ class Flipper(commands.Cog):
     async def on_ready(self):
         print('coin flipper ready')
 
-    @client.command()
+    @commands.command()
     async def flip(self, ctx, amt: int = 1):
         for i in range(amt):
             await ctx.send(f'`{self.flipper()}`')

@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from googlesearch import search
 
-client = commands.Bot(command_prefix='-')
+client = commands.Bot(command_prefix='!')
 
 class GFinder(commands.Cog):
     def __init__(self, client):
@@ -16,7 +16,7 @@ class GFinder(commands.Cog):
     async def on_ready(self):
         print('Laptop finder ready')
 
-    @client.command()
+    @commands.command()
     async def find(self, ctx, *queries):
         query = ' '.join(queries)
         got = do_search(query)
