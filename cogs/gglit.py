@@ -18,6 +18,11 @@ class GTS(commands.Cog):
             pic = discord.File(f)
             await ctx.send(file=pic)
 
+    @googl.error
+    async def on_command_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send("no args needed")
+
 
 def setup(client):
     client.add_cog(GTS(client))
